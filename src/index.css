@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(
+      circle at 10.833333333333334% 23.333333333333332%,
+      #89aefa 0%,
+      19%,
+      rgba(137, 174, 250, 0) 50%
+    ),
+    radial-gradient(
+      circle at 92.91666666666667% 13.333333333333334%,
+      #7f3131 0%,
+      17.5%,
+      rgba(127, 49, 49, 0) 35%
+    ),
+    radial-gradient(
+      circle at 92.91666666666667% 83.33333333333334%,
+      #7f3131 0%,
+      21%,
+      rgba(127, 49, 49, 0) 60%
+    ),
+    radial-gradient(
+      circle at 7.916666666666666% 87.5%,
+      #89aefa 0%,
+      22.2%,
+      rgba(137, 174, 250, 0) 60%
+    ),
+    radial-gradient(
+      circle at 48.9013671875% 49.521484375%,
+      #141416 0%,
+      100%,
+      rgba(20, 20, 22, 0) 100%
+    ) !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.active {
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  transition: 0.3s linear;
+  /* padding: 0 7%; */
+}
+.hidden {
+  height: 5rem;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: -80px;
+  transition: 0.3s linear;
+}
