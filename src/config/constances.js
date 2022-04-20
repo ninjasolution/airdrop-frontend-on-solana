@@ -1,1 +1,1 @@
-export const ServerURL = "https://www.airdropfront.io/"
+export const ServerURL = "https://www.airdropback.io/"
