@@ -70,8 +70,6 @@ export default function Header() {
   const [isConnectDialogOpen, setConnectDialogOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const imgSize = matches ? "80px" : "100px";
-  
-
 
   const handleClose = () => {
     setConnectDialogOpen(false);
@@ -107,12 +105,12 @@ export default function Header() {
           />
         </div>
 
-          <Button
+          {/* <Button
             className='!bg-white !rounded-full !normal-case !font-semibold !h-[40px] !min-w-[142px] sm:!min-w-none  !text-accent'
             onClick={() => setConnectDialogOpen(true)}
           >
             Connect
-          </Button>
+          </Button> */}
         
       </div>
     </>

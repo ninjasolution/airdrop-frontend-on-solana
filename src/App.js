@@ -7,6 +7,7 @@ import {
 } from "@mui/material";
 import Header from "./components/Header";
 import axios from "axios"
+import { ServerURL } from "./config/constances";
 
 function App() {
   const theme = useTheme();
@@ -15,14 +16,14 @@ function App() {
   const uploadHandler = (file) => {
     const formData = new FormData();
     formData.append("file", file);
-    axios.post("http://localhost:6430/api/file", formData, { headers: { "Content-Type": "multipart/form-data" } })
+    axios.post(`${ServerURL}api/file`, formData, { headers: { "Content-Type": "multipart/form-data" } })
       .then(res => {
         console.log(res.data)
       })
   }
 
   const requestAirdropHandler = () => {
-    axios.get("http://localhost:6430/api/airdrop")
+    axios.get(`${ServerURL}api/airdrop`)
       .then(res => {
         console.log(res.data);
       })
