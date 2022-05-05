@@ -1,1 +1,1 @@
-export const ServerURL = "https://www.airdropback.io/"
+export const ServerURL = "http://localhost:4000"

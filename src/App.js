@@ -8,22 +8,30 @@ import {
 import Header from "./components/Header";
 import axios from "axios"
 import { ServerURL } from "./config/constances";
+import { useEffect } from "react";
 
 function App() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
+  useEffect(() => {
+    axios.get(`${ServerURL}/api`).then(res => {
+      console.log(res.data)
+    })
+  }, [])
  
   const uploadHandler = (file) => {
     const formData = new FormData();
     formData.append("file", file);
-    axios.post(`${ServerURL}api/file`, formData, { headers: { "Content-Type": "multipart/form-data" } })
+
+    axios.post(`${ServerURL}/api/file`, formData, { headers: { "Content-Type": "multipart/form-data" } })
       .then(res => {
         console.log(res.data)
       })
   }
 
   const requestAirdropHandler = () => {
-    axios.get(`${ServerURL}api/airdrop`)
+    axios.get(`${ServerURL}/api/airdrop`)
       .then(res => {
         console.log(res.data);
       })
